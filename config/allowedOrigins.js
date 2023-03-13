@@ -1,6 +1,6 @@
 const allowedOrigins = [
     'http://127.0.0.1:5500',
-    'http://localhost:3000',
+    'https://ticket-management-system.herokuapp.com',
     'http://localhost:5000'
 ];
 
