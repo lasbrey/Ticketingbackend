@@ -148,7 +148,7 @@ const viewTicket = async (req, res) => {
  * @route   DELETE /ticket/:ticketID
  * @access  Private
  */
-const deleteTicket = async (req, res) => {
+ const deleteTicket = async (req, res) => {
   const ticketID = req.params.ticketID;
 
   if (!ticketID) {
@@ -157,17 +157,24 @@ const deleteTicket = async (req, res) => {
 
   try {
     const ticket = await Ticket.findOne({ ticketID }).exec();
-    const reply = await Reply.findOne({ ticketID }).exec();
-    if (!ticket || !reply) {
+    if (!ticket) {
       return res
         .status(404)
         .json({ message: `Ticket with ID ${ticketID} not found` });
     }
 
-    const result = await Ticket.deleteOne({ ticketID }).exec();
-    const resultTwo = await Reply.deleteOne({ ticketID }).exec();
+    let result;
+    let reply = await Reply.findOne({ ticketID }).exec();
+    if (reply) {
+      result = await Promise.all([
+        Reply.deleteOne({ ticketID }).exec(),
+        Ticket.deleteOne({ ticketID }).exec(),
+      ]);
+    } else {
+      result = await Ticket.deleteOne({ ticketID }).exec();
+    }
 
-    if (result.deletedCount === 1 || resultTwo.deletedCount === 1) {
+    if (result[0].deletedCount === 1 || result.deletedCount === 1) {
       return res
         .status(200)
         .json({ message: `Ticket with ID ${ticketID} has been deleted` });
