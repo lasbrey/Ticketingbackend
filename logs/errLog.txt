@@ -2,3 +2,15 @@
 20230309	18:28:40	c4d46cb3-1c45-42d1-bfcc-3946c5e3a62c	Error: ENOENT: no such file or directory, stat '/Users/lasbrey/Documents/Ticket/views/404.html'
 20230313	12:29:26	876afa36-fc95-491c-90ea-5c6d18f354dd	MongoServerSelectionError: connection <monitor> to 34.206.129.197:27017 timed out
 20230314	17:20:57	62209ca0-c95d-4085-a079-1e5b5b0721a8	Error: Not allowed by CORS
+20230314	19:23:17	74767eea-8633-409c-97f5-f7d638ccd6a5	ReferenceError: includes is not defined
+20230314	19:23:17	e8fabaf8-c748-4643-ab92-e636d268c7d3	ReferenceError: includes is not defined
+20230314	19:23:17	e6570bec-372b-4d3b-a141-26d375ab51f5	ReferenceError: includes is not defined
+20230314	19:23:23	7daef08d-a049-40d4-ac2f-05d4544f498b	ReferenceError: includes is not defined
+20230314	19:23:23	e5d36b57-0f3e-48e9-83e4-c1dd2959edf0	ReferenceError: includes is not defined
+20230314	19:24:38	9f9a4b3e-2164-4354-a6a7-731cb34e8707	Error: Not allowed by CORS
+20230314	19:24:38	566e1a14-3d54-4974-afd2-5917c71af438	Error: Not allowed by CORS
+20230314	19:24:38	bb10369a-e8da-44e5-ba53-d708ebb3d04f	Error: Not allowed by CORS
+20230314	19:24:57	cfe76478-77fb-4304-a377-113ba1f65c0b	Error: Not allowed by CORS
+20230314	19:24:57	5fbcd373-be98-4d86-93d2-2cb064cba0b1	Error: Not allowed by CORS
+20230314	19:25:00	627b7f5c-2435-4518-9b18-c4c334dc4617	Error: Not allowed by CORS
+20230314	19:25:00	4f8fa91e-1244-471d-82a0-8dfa5439a800	Error: Not allowed by CORS
