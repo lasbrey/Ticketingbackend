@@ -1433,3 +1433,7 @@
 20230314	19:32:33	08cd04c2-4524-4091-8bc0-558ccbcbbf48	POST	http://localhost:3000	/ticket/TS-57747092
 20230314	19:32:34	2b51dd06-571b-4fb3-b292-a47c5cf9f32c	GET	http://localhost:3000	/ticket/TS-57747092
 20230314	19:32:34	a6947997-f82a-4cba-96b8-3a0e3a0a024d	GET	http://localhost:3000	/ticket/TS-57747092
+20230316	10:34:18	5eb10d97-443e-4522-bf5f-5e2ca2b3fce3	GET	http://localhost:3000	/tickets
+20230316	10:34:18	963512c0-533b-4575-9df3-f7e7e97a9f6b	GET	http://localhost:3000	/tickets
+20230316	10:34:24	8e1c92ef-00dc-4462-8bba-e202d2a81534	GET	http://localhost:3000	/ticket/TS-41895807
+20230316	10:34:25	da9cbeef-3b10-46fe-8736-7509984bfcde	GET	http://localhost:3000	/ticket/TS-41895807

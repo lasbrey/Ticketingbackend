@@ -11,6 +11,8 @@ router
   .get(ticketController.viewTicket)
   .delete(ticketController.deleteTicket);
 
+router.route("/ticket/close/:ticketID").post(ticketController.closeTicket);
+
 router.route("/tickets").get(ticketController.getAllTickets);
 router.route("/knowledgebase").get(kbaseController.getAllKbase);
 router.route("/knowledgebase/post").post(kbaseController.createKbase);

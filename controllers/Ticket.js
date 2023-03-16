@@ -144,11 +144,41 @@ const viewTicket = async (req, res) => {
 };
 
 /**
+ * @desc    View Close Ticket
+ * @route   GET /ticket/:ticketID
+ * @access  Public
+ */
+const closeTicket = async (req, res) => {
+  const ticketID = req.params.ticketID;
+
+  if (!ticketID) {
+    return res.status(400).json({ message: "Ticket ID is required" });
+  }
+
+  try {
+    const ticket = await Ticket.findOne({ ticketID }).exec();
+
+    if (!ticket) {
+      return res
+        .status(404)
+        .json({ message: `Ticket with ID ${ticketID} not found` });
+    } else {
+      await Ticket.updateOne({ ticketID }, { status: "Closed" });
+    }
+
+    res.json({ ticket });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+/**
  * @desc    Delete Ticket
  * @route   DELETE /ticket/:ticketID
  * @access  Private
  */
- const deleteTicket = async (req, res) => {
+const deleteTicket = async (req, res) => {
   const ticketID = req.params.ticketID;
 
   if (!ticketID) {
@@ -193,4 +223,5 @@ module.exports = {
   createTicket,
   getAllTickets,
   deleteTicket,
+  closeTicket,
 };
