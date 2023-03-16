@@ -87,7 +87,7 @@ const replyTicket = async (req, res, next) => {
       createdAt,
     });
 
-    await Ticket.updateOne({ ticketID }, { status: "Solved" });
+    await Ticket.updateOne({ ticketID }, { status: "Pending" });
 
     res.json(result);
   } catch (err) {
